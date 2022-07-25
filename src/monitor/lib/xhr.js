@@ -5,7 +5,7 @@ export function injectXHR() {
   let oldOpen = XMLHttpRequest.prototype.open
   XMLHttpRequest.prototype.open = function (method, url, async) {
     // 上报请求无需拦截
-    if (!url.match(/logstores/)) {
+    if (!url.match(/logstores/) && !url.match(/sockjs/)) {
       this.logData = { method, url, async }
     }
     return oldOpen.apply(this, arguments)

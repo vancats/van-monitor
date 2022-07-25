@@ -2,7 +2,6 @@ import onload from "../utils/onload"
 import tracker from "../utils/tracker"
 
 export function blankScreen() {
-
   let wrapperElement = ['html', 'body', '#container', '.content']
   let emptyPoints = 0
 
