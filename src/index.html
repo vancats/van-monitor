@@ -16,6 +16,7 @@
       <input id="promiseErrorBtn" type="button" value="点击抛出Promise错误" onclick="promiseErrorClick()">
       <input id="successBtn" type="button" value="点击请求成功" onclick="sendSuccess()">
       <input id="wrongBtn" type="button" value="点击请求失败" onclick="sendError()">
+      <img src="testimg.png" alt="">
     </div>
   </div>
 
@@ -59,9 +60,14 @@
     let content = document.querySelector('.content')
     // content.innerHTML = '<span>@</span'.repeat(300)
 
-    document.addEventListener('DOMContentLoaded', () => {
+    document.addEvenner('DOMContentLoaded', () => {
       let start = Date.now()
       while ((Date.now() - start) < 1000) { }
+    })
+
+    document.addEventListener('load', () => {
+      let start = Date.now()
+      while (Date.now() - start < 3000) { }
     })
 
     setTimeout(() => {
@@ -69,7 +75,14 @@
       h1.innerHTML = '我是页面最有意义的内容'
       h1.setAttribute('elementtiming', 'meaningful')
       content.append(h1)
-    }, 2000);
+    }, 2000)
+
+    // setTimeout(() => {
+    //   history.pushState(null, null, '?page=1')
+    // }, 3000)
+    setTimeout(() => {
+      location.href = 'https://leetcode-cn.com/'
+    }, 10000)
   </script>
 
   <!-- <script src="/someError.js"></script> -->

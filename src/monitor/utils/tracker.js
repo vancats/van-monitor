@@ -9,7 +9,8 @@ function getExtraData() {
     title: document.title,
     url: location.href,
     timestamp: Date.now(),
-    userAgent: userAgent.parse(navigator.userAgent).name
+    userAgent: userAgent.parse(navigator.userAgent).name,
+    hostname: location.hostname,//主机的域名
   }
 }
 
